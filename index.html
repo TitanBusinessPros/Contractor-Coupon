@@ -393,19 +393,6 @@
             margin-top: 20px;
         }
 
-        /* Visitor counter */
-        .visitor {
-            background: #1c1c1c;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
-            padding: 10px;
-            font-size: 2rem;
-            text-align: center;
-            border: 6px outset #969696;
-            width: fit-content;
-            margin: 20px auto;
-        }
-
         .under-construction {
             background: repeating-linear-gradient(45deg, #f0e68c, #f0e68c 10px, #ff8c00 10px, #ff8c00 20px);
             padding: 5px;
@@ -437,8 +424,6 @@
     <div class="under-construction">
         <span class="blink">🚧 UNDER CONSTRUCTION 🚧</span> (since 1998)
     </div>
-
-    <!-- Real visitor counter using localStorage -->
 
     <div class="logo-container">
         <div class="company-logo">
@@ -517,14 +502,14 @@
     </footer>
 
     <!-- Reliable rooster sound from SoundJay -->
-    <audio id="roosterSound" preload="auto" src="https://www.soundjay.com/misc/rooster-1.mp3"></audio>
+    <audio id="roosterSound" preload="auto" src="https://www.soundjay.com/misc/rooster"></audio>
 
-    <!-- Background music -->
-    <audio id="tulsaTunes" preload="auto" autoplay loop>
+    <!-- Background music (no autoplay, starts on first click) -->
+    <audio id="tulsaTunes" preload="auto" loop>
         <source src="https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Tulsa%20Coupon%20Stampede.mp3" type="audio/mpeg">
     </audio>
-    <div class="music-note fixed-bottom" id="musicNote" style="position:fixed; bottom:20px; right:20px; background:#2c3e50; color:#f1c40f; border-radius:60px; padding:10px 20px; z-index:10000;">
-        <i class="fas fa-music"></i> 🐔 Rooster clicks ON! (click anywhere)
+    <div class="music-note fixed-bottom" id="musicNote" style="position:fixed; bottom:20px; right:20px; background:#2c3e50; color:#f1c40f; border-radius:60px; padding:10px 20px; z-index:10000; cursor:pointer;">
+        <i class="fas fa-music"></i> 🐔 Click anywhere to start the Tulsa Turn-Up! 🎸
     </div>
 
     <script>
@@ -564,51 +549,44 @@
             });
         }
 
-        // Real visitor counter using localStorage
-        function updateCounter() {
-            let count = localStorage.getItem('visitCount');
-            if (count === null) {
-                count = 0;
-            } else {
-                count = parseInt(count, 10);
-            }
-            count++;
-            localStorage.setItem('visitCount', count);
-            document.getElementById('countDisplay').textContent = count;
+        // Audio setup
+        const rooster = document.getElementById('roosterSound');
+        const tulsaTunes = document.getElementById('tulsaTunes');
+        const musicNote = document.getElementById('musicNote');
+        let musicStarted = false;
+
+        function startMusic() {
+            if (musicStarted) return;
+            tulsaTunes.volume = 0.4;
+            tulsaTunes.play().then(() => {
+                musicStarted = true;
+                musicNote.innerHTML = '<i class="fas fa-music"></i> 🐔 Tulsa Turn-Up is playing! 🔨';
+            }).catch(e => {
+                console.log('Music failed to start:', e);
+                musicNote.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Music blocked? Click again.';
+            });
         }
 
-        // Rooster sound on every click
-        const rooster = document.getElementById('roosterSound');
-        rooster.load(); // preload
+        // Rooster on every click
         document.addEventListener('click', function() {
             // Clone to allow overlapping crows
             const crow = rooster.cloneNode();
             crow.volume = 0.5;
             crow.play().catch(e => console.log('Rooster blocked:', e));
+
+            // Start background music on first click
+            startMusic();
         });
 
-        // Background music autoplay fallback
-        function initAudio() {
-            const audio = document.getElementById('tulsaTunes');
-            audio.volume = 0.4;
-            let playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    const note = document.getElementById('musicNote');
-                    note.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> Click anywhere to hear the Tulsa Turn-Up! 🎸';
-                    document.body.addEventListener('click', function handler() {
-                        audio.play().then(() => {
-                            document.getElementById('musicNote').style.display = 'none';
-                        });
-                        document.body.removeEventListener('click', handler);
-                    });
-                });
-            }
-        }
+        // Also allow clicking the music note to start
+        musicNote.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent triggering the document click again (but it's fine)
+            startMusic();
+        });
 
+        // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             generateDealCards();
-            updateCounter(); // set visitor count
 
             document.querySelectorAll('.btn').forEach(btn => {
                 btn.addEventListener('click', function(e) {
@@ -616,7 +594,6 @@
                     document.querySelector('#text-method').scrollIntoView({ behavior: 'smooth' });
                 });
             });
-            initAudio();
         });
     </script>
 </body>
