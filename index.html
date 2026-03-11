@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contractor Coupon Store · Tulsa OK · Future Deals [TEXT EDITION]</title>
+    <title>Contractor Coupon Store · Tulsa OK · Future Deals</title>
     
-    <!-- Meta Tags for Local SEO (Tulsa, Oklahoma) – same text -->
+    <!-- Meta Tags for Local SEO (Tulsa, Oklahoma) -->
     <meta name="description" content="Welcome to The Contractor Coupon Store! Visit us to find discounts you won't find anywhere else! No-Sign-Up or Downloads! Pure Savings & Rewards! Tulsa's best contractor deals.">
     
-    <!-- Open Graph / Facebook (same images) -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.contractorcoupon.store">
     <meta property="og:title" content="Contractor Coupon Store – Tulsa OK Deals">
     <meta property="og:description" content="Welcome to The Contractor Coupon Store! Visit us to find discounts you won't find anywhere else! No-Sign-Up or Downloads! Pure Savings & Rewards!">
     <meta property="og:image" content="https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Meta.jpg">
     
-    <!-- Twitter (same) -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.contractorcoupon.store">
     <meta name="twitter:title" content="Contractor Coupon Store – Tulsa OK">
     <meta name="twitter:description" content="Welcome to The Contractor Coupon Store! Visit us to find discounts you won't find anywhere else! No-Sign-Up or Downloads! Pure Savings & Rewards!">
     <meta name="twitter:image" content="https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Meta.jpg">
     
-    <!-- Favicon (same) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Logo-1.png">
-    <!-- Font Awesome (for icons) + goofy fonts -->
+    <!-- Font Awesome (for icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Bringing in the most unprofessional fonts on earth -->
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Permanent+Marker&family=Rock+Salt&family=Special+Elite&display=swap" rel="stylesheet">
+    <!-- Keep only one fun font for headings, rest are system fonts for legibility -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -35,14 +35,13 @@
             box-sizing: border-box;
         }
 
-        /* ---------- CHICKEN CURSOR (SVG) ---------- */
+        /* Clean, readable base styles */
         body {
-            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
-            background: #f0c45a;
-            background-image: repeating-linear-gradient(45deg, #ffdb7e 0px, #ffdb7e 20px, #f7b32b 20px, #f7b32b 40px);
-            color: #1a2c3a;
-            line-height: 1.5;
-            /* Chicken emoji as custom cursor */
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, Arial, sans-serif;
+            background: #f9f2e0; /* Soft, warm background */
+            color: #1e2b37;
+            line-height: 1.6;
+            /* Keep the fun chicken cursor */
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="2" y="24" font-size="28">🐔</text></svg>') 16 16, auto;
         }
 
@@ -52,16 +51,17 @@
             padding: 0 15px;
         }
 
-        @keyframes blink {
+        /* Reduced animation for better readability */
+        @keyframes subtle-blink {
             0% { opacity: 1; }
-            50% { opacity: 0; }
+            50% { opacity: 0.7; }
             100% { opacity: 1; }
         }
 
         .blink {
-            animation: blink 1s infinite;
+            animation: subtle-blink 1.5s infinite;
             font-weight: bold;
-            background: red;
+            background: #c62828;
             color: white;
             padding: 5px 15px;
             display: inline-block;
@@ -69,98 +69,96 @@
         }
 
         marquee {
-            font-size: 1.5rem;
-            background: #000;
-            color: #ff0;
-            padding: 8px;
-            border: 4px dashed magenta;
-            text-transform: uppercase;
-            font-family: 'Rock Salt', cursive;
+            font-size: 2rem; /* INCREASED for better readability */
+            background: #1a1a2e;
+            color: #f1c40f;
+            padding: 10px;
+            border: 3px solid #e67e22;
+            font-family: 'Patrick Hand', cursive;
         }
 
-        /* Logo container - now with CONSTRUCTION ZONE banner */
         .logo-container {
             text-align: center;
-            padding: 20px;
-            background: #a57c4b;
-            border: 8px ridge #8b5a2b;
+            padding: 30px 20px;
+            background: #d49b6a;
+            border: 6px solid #7b3f00;
             margin: 20px 0;
-            box-shadow: 15px 15px 0px #4b2e1e;
-            transform: rotate(-1deg);
+            box-shadow: 8px 8px 0 #4b2e1e;
+            transform: rotate(-0.5deg);
             position: relative;
         }
 
         .logo-container::before {
             content: "🚧🚧🚧 CONSTRUCTION ZONE 🚧🚧🚧";
             position: absolute;
-            top: -30px;
+            top: -25px;
             left: 50%;
             transform: translateX(-50%);
-            background: #ffcc00;
-            color: #000;
-            font-size: 1.4rem;
+            background: #ffc107;
+            color: #1a1a2e;
+            font-size: 1.2rem;
             padding: 5px 20px;
             border-radius: 40px;
-            border: 3px solid #ff6600;
-            font-family: 'Permanent Marker', cursive;
+            border: 3px solid #e65100;
+            font-family: 'Fredoka One', cursive;
             white-space: nowrap;
-            box-shadow: 0 5px 0 #b33c00;
+            box-shadow: 0 4px 0 #b33c00;
         }
 
         .company-logo img {
             max-width: 90%;
             height: auto;
-            max-height: 350px;
-            border: 12px ridge gold;
+            max-height: 300px;
+            border: 8px solid #f1c40f;
             background: white;
-            transform: rotate(1deg);
-            filter: drop-shadow(10px 15px 0 #4d2600);
+            transform: rotate(0.5deg);
+            filter: drop-shadow(6px 8px 0 #4d2600);
         }
 
         .main-header {
-            background: #b0d3f0;
-            border: 8px dotted #ff00aa;
+            background: #c5e0f7;
+            border: 4px solid #d4145a;
             padding: 30px 20px;
             margin: 30px 0;
-            box-shadow: 20px 20px 0 #3a6b8f, -5px -5px 0 #ffb3ff;
-            font-family: 'Special Elite', cursive;
+            box-shadow: 10px 10px 0 #2c5f8a;
+            font-family: 'Patrick Hand', cursive;
         }
 
         .main-header h1 {
-            font-family: 'Permanent Marker', cursive;
-            font-size: 3rem;
-            color: #004080;
-            text-shadow: 4px 4px 0 #ffcc00, 8px 8px 0 #ff00cc;
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.8rem;
+            color: #003366;
+            text-shadow: 2px 2px 0 #ffb300;
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-align: center;
         }
 
-        /* CENTERED HEADER PARAGRAPH */
         .main-header p {
-            font-size: 1.4rem;
-            background: rgba(255, 255, 0, 0.6);
+            font-size: 1.8rem; /* INCREASED from 1.3rem */
+            background: #fff9c4;
             padding: 20px;
-            border: 6px double red;
-            color: #000;
-            font-weight: bold;
+            border: 4px solid #b71c1c;
+            color: #1a1a1a;
+            font-weight: 500;
             text-align: center;
             max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
+            border-radius: 8px;
         }
 
         .section-title {
             text-align: center;
-            font-family: 'Rock Salt', cursive;
-            font-size: 2.8rem;
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.4rem;
             margin: 50px 0 20px;
             color: #ffffff;
-            background: linear-gradient(135deg, #ff00ff, #00ffff, #ffaa00);
+            background: linear-gradient(145deg, #1e3c72, #2a5298);
             padding: 15px;
-            border: 8px ridge #ffcc00;
-            transform: skewX(-5deg) rotate(1deg);
-            text-shadow: 3px 3px 0 #7f00ff;
+            border: 4px solid #f9a825;
+            border-radius: 12px;
+            text-shadow: 2px 2px 0 #0d2b4e;
             word-break: break-word;
         }
 
@@ -172,36 +170,32 @@
         }
 
         .tool-card {
-            background: #fcd757;
-            border: 6px ridge #c56c00;
-            border-radius: 30px 0 30px 0;
+            background: #ffffff;
+            border: 3px solid #b5651e;
+            border-radius: 16px;
             padding: 0 0 20px 0;
-            box-shadow: 15px 15px 0 #6b3f00, 5px 5px 0 5px #ffb347;
-            transition: all 0.1s ease;
+            box-shadow: 6px 8px 0 #6b3f00;
+            transition: transform 0.2s ease;
             transform: rotate(var(--rot, 0deg));
             display: flex;
             flex-direction: column;
         }
 
-        .tool-card:nth-child(odd) { --rot: -2deg; }
-        .tool-card:nth-child(even) { --rot: 3deg; }
-        .tool-card:nth-child(3n) { --rot: 1.5deg; }
+        .tool-card:nth-child(odd) { --rot: -1deg; }
+        .tool-card:nth-child(even) { --rot: 1.5deg; }
+        .tool-card:nth-child(3n) { --rot: 0.5deg; }
 
         .tool-card:hover {
-            animation: jackhammer 0.1s infinite;
-            box-shadow: 5px 5px 0 5px red, 0 0 0 8px yellow;
-        }
-
-        @keyframes jackhammer {
-            0% { transform: translate(1px, 1px) rotate(0.5deg); }
-            100% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+            transform: scale(1.02) rotate(0deg);
+            box-shadow: 4px 6px 0 #b5651e;
         }
 
         .tool-image {
             height: 160px;
             overflow: hidden;
-            border-bottom: 8px dashed orange;
-            background: #6a4e2e;
+            border-bottom: 4px solid #e67e22;
+            background: #8b5a2b;
+            border-radius: 12px 12px 0 0;
         }
 
         .tool-image img {
@@ -209,148 +203,151 @@
             height: 100%;
             object-fit: cover;
             opacity: 0.95;
-            border-radius: 20px 20px 0 0;
         }
 
         .tool-content {
-            padding: 20px 12px;
+            padding: 20px 15px;
             flex-grow: 1;
-            background: #fffacd;
+            background: #fffef7;
         }
 
         .tool-content h3 {
-            font-family: 'Permanent Marker', cursive;
+            font-family: 'Fredoka One', cursive;
             font-size: 1.3rem;
-            color: #a52a2a;
-            border-left: 12px solid #ff4500;
-            padding-left: 10px;
+            color: #b33100;
+            border-left: 6px solid #ff6f00;
+            padding-left: 12px;
             margin-bottom: 15px;
-            text-decoration: underline wavy #00f;
+            /* Removed the wavy blue underline */
+            text-decoration: none;
         }
 
         .tool-content p {
             font-size: 1rem;
-            background: #d3ffce;
-            padding: 10px;
-            border: 3px dotted #008000;
-            color: #1d2b1d;
+            background: #ecf9ec;
+            padding: 12px;
+            border: 2px solid #2e7d32;
+            color: #1b2f1b;
             margin-bottom: 20px;
-            font-weight: 600;
+            font-weight: 500;
+            border-radius: 6px;
         }
 
         .btn {
             display: block;
-            padding: 15px 10px;
-            background: #ff69b4;
+            padding: 12px 10px;
+            background: #d81b60;
             color: #fff;
-            font-family: 'Comic Neue', cursive;
+            font-family: 'Patrick Hand', cursive;
             font-weight: 700;
             font-size: 1.3rem;
             text-align: center;
             text-decoration: none;
-            border: 4px solid #00ced1;
+            border: 3px solid #00acc1;
             border-radius: 40px;
-            box-shadow: 0 8px 0 #ba2d7a, 0 10px 10px black;
-            transition: 0.05s linear;
+            box-shadow: 0 4px 0 #880e4f;
+            transition: 0.1s linear;
             text-transform: uppercase;
         }
 
         .btn:hover {
-            background: #00fa9a;
-            color: #000;
-            border-color: #ff1493;
-            transform: translateY(5px);
-            box-shadow: 0 3px 0 #ba2d7a, 0 8px 10px black;
+            background: #43a047;
+            color: #fff;
+            border-color: #ffb300;
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #2e7d32;
         }
 
         .joke-area {
-            background: #2e1b0f;
-            color: #f0e68c;
-            padding: 25px;
+            background: #2b211b;
+            color: #ffecb3;
+            padding: 30px;
             margin: 50px 0;
-            border: 12px double #ffd700;
-            font-size: 1.8rem;
+            border: 6px solid #fbc02d;
+            font-size: 1.6rem;
             text-align: center;
-            font-family: 'Rock Salt', cursive;
-            border-radius: 100px 20px 100px 20px;
-            box-shadow: 0 0 0 8px #8b4513;
+            font-family: 'Patrick Hand', cursive;
+            border-radius: 40px 20px 40px 20px;
+            box-shadow: 0 0 0 4px #a0522d;
         }
 
         .joke-area i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             display: block;
         }
 
-        /* NEW TEXT METHOD SECTION */
         .text-method-section {
-            background: #c0d6e8;
-            border: 12px ridge #808080;
+            background: #d7e3f0;
+            border: 6px solid #4a5c6e;
             padding: 50px 30px;
             margin: 50px 0;
-            border-radius: 80px 0 80px 0;
-            box-shadow: 25px 25px 0 #4b4b4b, -5px -5px 0 #f4c542;
+            border-radius: 40px 0 40px 0;
+            box-shadow: 15px 15px 0 #2c3e50;
             text-align: center;
         }
 
         .text-method-title {
-            font-family: 'Permanent Marker', cursive;
-            font-size: 3rem;
-            background: #ffa500;
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.8rem;
+            background: #ff9800;
             display: inline-block;
-            padding: 0 30px;
-            transform: rotate(-2deg);
-            border: 8px ridge #0000ff;
-            color: #2f4f4f;
-            text-shadow: 3px 3px 0 cyan;
+            padding: 0 20px;
+            transform: rotate(-1deg);
+            border: 4px solid #1565c0;
+            color: #1e2b3a;
+            text-shadow: 2px 2px 0 #bbdefb;
             margin-bottom: 30px;
+            border-radius: 12px;
         }
 
         .text-method-box {
-            background: #b0c4de;
-            border: 12px groove #4b0082;
+            background: #e3f2fd;
+            border: 6px solid #512da8;
             padding: 40px;
-            box-shadow: inset 0 0 30px #ff00ff, 20px 20px 0 #2e2e2e;
+            box-shadow: inset 0 0 10px #ffb74d, 10px 10px 0 #1a237e;
             max-width: 800px;
             margin: 0 auto;
+            border-radius: 20px;
         }
 
         .text-method-box p {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin: 20px 0;
-            font-weight: bold;
+            font-weight: 500;
+            color: #1a1a2e;
         }
 
         .text-method-box .phone-big {
-            font-size: 3rem;
-            font-family: 'Special Elite', cursive;
-            background: black;
-            color: #0ff;
+            font-size: 2.8rem;
+            font-family: 'Patrick Hand', cursive;
+            background: #0d1b2a;
+            color: #a5d6ff;
             padding: 15px 30px;
             display: inline-block;
             border-radius: 60px;
-            border: 4px solid yellow;
+            border: 4px solid #fdd835;
             margin: 20px 0;
         }
 
         .text-method-box .hours {
-            background: #ffff00;
-            color: #000;
+            background: #fdd835;
+            color: #1a1a2e;
             padding: 15px;
-            border: 6px dotted magenta;
-            font-size: 1.5rem;
+            border: 4px solid #b71c1c;
+            font-size: 1.3rem;
             margin: 20px auto;
             max-width: 600px;
+            border-radius: 16px;
         }
 
-        /* Footer – centered and strikethrough removed */
         footer {
-            background: #2e2117;
-            border-top: 16px solid #b8860b;
-            color: #ffe4b5;
+            background: #2c3e50;
+            border-top: 6px solid #b8860b;
+            color: #f5f5f5;
             padding: 40px 0;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 80px;
-            border-radius: 90px 90px 0 0;
+            border-radius: 50px 50px 0 0;
             text-align: center;
         }
 
@@ -367,9 +364,9 @@
         }
 
         .footer-logo h3 {
-            font-family: 'Permanent Marker', cursive;
-            color: #daa520;
-            /* no more red line */
+            font-family: 'Fredoka One', cursive;
+            color: #fbc02d;
+            text-decoration: none; /* ensure no underline */
         }
 
         .contact-item {
@@ -381,37 +378,37 @@
         }
 
         .contact-item i {
-            background: #00ffff;
+            background: #26c6da;
             color: #000;
             padding: 8px;
             border-radius: 50%;
         }
 
         .footer-bottom {
-            border-top: 2px dashed orange;
+            border-top: 2px dashed #ffb74d;
             padding-top: 30px;
             margin-top: 20px;
         }
 
         .under-construction {
-            background: repeating-linear-gradient(45deg, #f0e68c, #f0e68c 10px, #ff8c00 10px, #ff8c00 20px);
+            background: repeating-linear-gradient(45deg, #ffe082, #ffe082 10px, #ffb74d 10px, #ffb74d 20px);
             padding: 5px;
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-align: center;
             font-weight: bold;
-            color: #00008b;
-            border: 12px double red;
+            color: #0a2f44;
+            border: 6px solid #c62828;
             margin: 15px 0;
         }
 
-        .music-note {
-            background: #c39797;
-            font-size: 1.5rem;
-            border: 5px solid gold;
-            bottom: 30px;
-            right: 30px;
-            padding: 20px;
-            z-index: 9999;
+        /* Responsive adjustments for large text */
+        @media (max-width: 768px) {
+            .main-header p {
+                font-size: 1.4rem;
+            }
+            marquee {
+                font-size: 1.6rem;
+            }
         }
 
         @media (max-width: 1200px) { .tools-grid { grid-template-columns: repeat(4,1fr); } }
@@ -433,33 +430,33 @@
 
     <header class="main-header">
         <div class="container">
-            <marquee behavior="alternate" scrollamount="12">🚀 Tulsa’s Finest Contractor Deals 🚀</marquee>
-            <p>Welcome to The Contractor Coupon Store – your cyber-portal to exclusive service discounts in Tulsa, Oklahoma. Local contractors post their most powerful deals here, hidden from the rest of the web. <br><strong>Your coupon code will be transmitted within 12 hours – just tell us which company you chose!</strong></p>
+            <marquee behavior="alternate" scrollamount="8">🚀 Tulsa’s Finest Contractor Deals 🚀</marquee>
+            <p>Welcome to The Contractor Coupon Store – your cyber-portal to exclusive service discounts in Tulsa, Oklahoma. Local contractors post their most powerful deals here, hidden from the rest of the web. <br><strong>Your coupon code will be transmitted within 12 hours – just tell us which coupon you chose!</strong></p>
         </div>
     </header>
 
     <div class="container">
         <div class="joke-area">
             <i class="fa-solid fa-brush"></i>
-            Why did the contractor bring a ladder to the bar? <br> 
-            <span style="background:white; color:black; padding:10px; display:inline-block; margin-top:10px;">Because he heard the drinks were on the house! 🏠🥴</span>
+            Contractors can place their best deals here for free! <br> 
+            <span style="background:#ffffff; color:#1a1a2e; padding:10px; display:inline-block; margin-top:10px; border-radius:8px;">Customers in Tulsa find deals here they won't find anywhere else!</span>
         </div>
     </div>
 
     <section class="tools-section">
         <div class="container">
-            <h2 class="section-title">⚡ FEATURED TULSA DEALS (maybe) ⚡</h2>
+            <h2 class="section-title">⚡ FEATURED TULSA DEALS ⚡</h2>
             <div class="tools-grid" id="toolsGrid"></div>
         </div>
     </section>
 
-    <!-- NEW TEXT METHOD SECTION (replaces old contact form) -->
+    <!-- NEW TEXT METHOD SECTION -->
     <section class="text-method-section" id="text-method">
         <div class="container">
             <h2 class="text-method-title">📲 TEXT TO REVEAL</h2>
             <div class="text-method-box">
                 <p>🔨 No forms, no sign‑ups – just pure savings!</p>
-                <p>Text your <strong>name</strong> and the <strong>coupon code</strong> (e.g., A‑1) to:</p>
+                <p>Text your <strong></strong><strong>coupon code</strong> (e.g., A‑1) to:</p>
                 <div class="phone-big">405-998-7979</div>
                 <p>We’ll text you back with the company name and all the details.</p>
                 <div class="hours">
@@ -471,10 +468,10 @@
         </div>
     </section>
 
-    <!-- Another banner (kept for chaos) -->
+    <!-- Another banner -->
     <div class="container">
-        <div style="background:#ee82ee; padding:10px; text-align:center; border:10px ridge white; margin:30px 0;">
-            <span style="font-size:2.5rem;">📞 CALL NOW! (just kidding – text us) 📞</span>
+        <div style="background:#ce93d8; padding:10px; text-align:center; border:6px solid #ffffff; margin:30px 0; border-radius:12px;">
+            <span style="font-size:2rem;">📞 CALL NOW! (just kidding – text us) 📞</span>
         </div>
     </div>
 
@@ -486,10 +483,10 @@
                     <p>Your local source for exclusive service deals in Tulsa, Oklahoma. Contractors post their best offers – you save big. (or we'll eat our hard hats)</p>
                 </div>
                 <div class="footer-contact">
-                    <h4 style="color:#ffa500;">Contact & Location (we're in a truck nearby)</h4>
+                    <h4 style="color:#ffb74d;">Contact & Location (we're in a truck nearby)</h4>
                     <div class="contact-info">
                         <div class="contact-item"><i class="fas fa-phone"></i> 405-998-7979</div>
-                        <div class="contact-item"><i class="fas fa-globe"></i> www.okalhoma.marketing</div>
+                        <div class="contact-item"><i class="fas fa-globe"></i> www.oklahoma.marketing</div>
                         <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Tulsa, Oklahoma (behind the donut shop)</div>
                         <div class="contact-item"><i class="fas fa-envelope"></i> titanbusinesspros@gmail.com</div>
                     </div>
@@ -504,13 +501,10 @@
     <!-- Reliable rooster sound from SoundJay -->
     <audio id="roosterSound" preload="auto" src="https://www.soundjay.com/misc/rooster"></audio>
 
-    <!-- Background music (no autoplay, starts on first click) -->
+    <!-- Background music -->
     <audio id="tulsaTunes" preload="auto" loop>
-        <source src="https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Tulsa%20Coupon%20Stampede.mp3" type="audio/mpeg">
+        <source src="https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Tulsa%20Coupon%20Stampede.mp" type="audio/mpeg">
     </audio>
-    <div class="music-note fixed-bottom" id="musicNote" style="position:fixed; bottom:20px; right:20px; background:#2c3e50; color:#f1c40f; border-radius:60px; padding:10px 20px; z-index:10000; cursor:pointer;">
-        <i class="fas fa-music"></i> 🐔 Click anywhere to start the Tulsa Turn-Up! 🎸
-    </div>
 
     <script>
         // Contractor deals data – unchanged
@@ -521,10 +515,12 @@
             { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/HVAC.png", title: "Climate Control HVAC", description: "Put your best coupon deals on our new coupon website for free!" },
             { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Construction.png", title: "Construction Company", description: "Put your discount coupons on our new platform that will be advertised all over the Tulsa area!" },
             { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/website.png", title: "Best Website Deal", description: "Get a basic one page website with contact form for $25! Coupon Code A-1" },
-            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Air-Con-100.png", title: "$100 off Air Conditioning Repairs", description: "5-Star Rated On Google with 10 plus years in business! Coupon Code A-2" },
-            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Plumbing-25%25.png", title: "25% off your plumbing needs", description: "5-Star Rated On Google with 8 years in business! Valid for first time customers only! Coupon Code A-3" },
-            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Dirt-1000%20off.png", title: "$1,000 off dirt work", description: "5-Star Rated On Google with 10 plus years in business! Only valid with $10,000 or more in dirt work. Coupon Code A-4" },
-            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Roof-1000.png", title: "$1,000 off new roofs", description: "5-Star Rated On Google with 15 plus years in business! Only valid on new roofs that qualify. Coupon Code A-5" }
+            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Air-Con-100.png", title: "$100 off Air Conditioning Repairs", description: "Highly Rated On Google with 10 plus years in business! Coupon Code A-2" },
+            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Plumbing-25%25.png", title: "25% off your plumbing needs", description: "Highly Rated On Google with 8 years in business! Valid for first time customers only! Coupon Code A-3" },
+            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Dirt-1000%20off.png", title: "$1,000 off dirt work", description: "Highly Rated On Google with 10 plus years in business! Only valid with $10,000 or more in dirt work. Coupon Code A-4" },
+            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Roof-1000.png", title: "$1,000 off new roofs", description: "Highly Rated On Google with 15 plus years in business! Only valid on new roofs that qualify. Coupon Code A-5" },
+            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/25-off-concrete.png", title: "25%-OFF Concrete Work", description: "Save thousands with this deal! Insured for residential & commercial! Only valid on 250 sq. ft. or more. Coupon Code A-6" },
+            { image: "https://github.com/TitanBusinessPros/Contractor-Coupon/raw/main/Free-Gate.png", title: "Free-Gate", description: "Save big when you get a fence 150 ft. or longer and gain a free gate! Tulsa area only! Coupon Code A-7" }
         ];
 
         function generateDealCards() {
@@ -552,7 +548,6 @@
         // Audio setup
         const rooster = document.getElementById('roosterSound');
         const tulsaTunes = document.getElementById('tulsaTunes');
-        const musicNote = document.getElementById('musicNote');
         let musicStarted = false;
 
         function startMusic() {
@@ -560,31 +555,19 @@
             tulsaTunes.volume = 0.4;
             tulsaTunes.play().then(() => {
                 musicStarted = true;
-                musicNote.innerHTML = '<i class="fas fa-music"></i> 🐔 Tulsa Turn-Up is playing! 🔨';
             }).catch(e => {
                 console.log('Music failed to start:', e);
-                musicNote.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Music blocked? Click again.';
             });
         }
 
-        // Rooster on every click
+        // Rooster on every click, and start background music
         document.addEventListener('click', function() {
-            // Clone to allow overlapping crows
             const crow = rooster.cloneNode();
             crow.volume = 0.5;
             crow.play().catch(e => console.log('Rooster blocked:', e));
-
-            // Start background music on first click
             startMusic();
         });
 
-        // Also allow clicking the music note to start
-        musicNote.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent triggering the document click again (but it's fine)
-            startMusic();
-        });
-
-        // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             generateDealCards();
 
